@@ -2,6 +2,15 @@
 
 An MCP server for interacting with the monday.com API, providing tools for boards, items, workspaces, sprints, and documents.
 
+## Configuration
+
+| Field | Required | Default | Description |
+|-------|----------|---------|-------------|
+| `api_token` | Yes | - | monday.com API token |
+| `read_only` | No | true | Enable read-only mode |
+| `mode` | No | "api" | Tool mode: "api", "apps", or "atp" |
+| `enable_dynamic_api_tools` | No | "false" | Dynamic API tools: "false", "true", or "only" |
+
 ## Tools
 
 ### `get_user_context`
@@ -220,15 +229,6 @@ tool call library/monday -m search -p searchType=BOARD -p searchTerm="marketing"
 # Get board items
 tool call library/monday -m get_board_items_page -p boardId=123456789 -p includeColumns=true
 ```
-
-### Configuration
-
-| Field | Required | Default | Description |
-|-------|----------|---------|-------------|
-| `api_token` | Yes | - | monday.com API token |
-| `read_only` | No | true | Enable read-only mode |
-| `mode` | No | "api" | Tool mode: "api", "apps", or "atp" |
-| `enable_dynamic_api_tools` | No | "false" | Dynamic API tools: "false", "true", or "only" |
 
 ### Prerequisites
 
