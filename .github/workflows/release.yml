@@ -36,7 +36,11 @@ jobs:
       - name: Init upstream submodule
         run: |
           git submodule sync --recursive
-          git submodule update --init --recursive upstream
+          for i in 1 2 3 4 5; do
+            git submodule update --init --recursive upstream && break
+            echo "Attempt $i failed, retrying in $((i * 10)) seconds..."
+            sleep $((i * 10))
+          done
 
       - name: Build upstream dist
         env:
