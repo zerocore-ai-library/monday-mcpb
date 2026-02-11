@@ -2,6 +2,42 @@
 
 An MCP server for interacting with the monday.com API, providing tools for boards, items, workspaces, sprints, and documents.
 
+## Setup
+
+### Using tool CLI
+
+Install the CLI from https://github.com/zerocore-ai/tool-cli
+
+```bash
+# Install from tool.store
+tool install library/monday
+```
+
+```bash
+# View available tools
+tool info library/monday
+```
+
+```bash
+# Get current user context
+tool call library/monday -m get_user_context
+```
+
+```bash
+# Search for boards
+tool call library/monday -m search -p searchType=BOARD -p searchTerm="marketing"
+```
+
+```bash
+# Get board items
+tool call library/monday -m get_board_items_page -p boardId=123456789 -p includeColumns=true
+```
+
+### Prerequisites
+
+- Node.js 20+
+- monday.com API token (from Developer settings)
+
 ## Configuration
 
 | Field | Required | Default | Description |
@@ -198,42 +234,6 @@ Get complete summary and analysis of a sprint.
 Get custom activities from the E&A app.
 
 **Input:** None required.
-
-## Setup
-
-### Using tool CLI
-
-Install the CLI from https://github.com/zerocore-ai/tool-cli
-
-```bash
-# Install from tool.store
-tool install library/monday
-```
-
-```bash
-# View available tools
-tool info library/monday
-```
-
-```bash
-# Get current user context
-tool call library/monday -m get_user_context
-```
-
-```bash
-# Search for boards
-tool call library/monday -m search -p searchType=BOARD -p searchTerm="marketing"
-```
-
-```bash
-# Get board items
-tool call library/monday -m get_board_items_page -p boardId=123456789 -p includeColumns=true
-```
-
-### Prerequisites
-
-- Node.js 20+
-- monday.com API token (from Developer settings)
 
 ## License
 
