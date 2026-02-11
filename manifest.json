@@ -148,6 +148,8 @@
   },
   "_meta": {
     "store.tool.mcpb": {
+      "runtime": "javascript/node",
+      "categories": ["project-management"],
       "scripts": {
         "build": "npm run build:bundle"
       },
