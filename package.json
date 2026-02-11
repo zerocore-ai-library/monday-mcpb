@@ -1,7 +1,7 @@
 {
   "name": "monday-mcpb-bundle",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Build-time dependencies for the monday.com MCPB bundle.",
   "license": "UNLICENSED",
   "scripts": {
